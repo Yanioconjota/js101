@@ -6,7 +6,8 @@ disponible su espacio en memoria para otras peticiones.*/
 
 let saludar = persona => {
   let mensaje = 'Hola!';
-  let nombre = () => { return mensaje + ' ' + persona;}
+  //en la siguiente función se omiten las {} y el return porque devuelve una sola expresión 
+  let nombre = () => mensaje + ' ' + persona;
   return nombre();
 }
 
