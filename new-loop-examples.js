@@ -14,6 +14,7 @@ propiedades de un objeto.
 
  for (const llave in persona) {
    console.log('En el atributo llave ' + chalk.green(llave) + ' se encuentra el valor ' + chalk.yellow(persona[llave]));
+   //Con corchetes accedemos al valor del elemento del array
  }
 
 /**
