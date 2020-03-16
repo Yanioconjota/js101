@@ -5,9 +5,12 @@ const accion = process.argv[2];
 switch(accion) {
     case 'listar' : 
         const tareasArray = tareas.leer();
-        for (let i = 0; i < tareasArray.length; i++) {
-            console.log((i+1) + ' - ' + 'Descripción: ' + chalk.cyan(tareasArray[i].descripcion) + ' Estado ' + chalk.green(tareasArray[i].estado));
-        }
+        tareasArray.forEach((value, i) => {
+            console.log((i + 1) + ' - ' + 'Descripción: ' + chalk.cyan(tareasArray[i].descripcion) + ' Estado ' + chalk.green(tareasArray[i].estado));
+        });
+        // for (let i = 0; i < tareasArray.length; i++) {
+        //     console.log((i+1) + ' - ' + 'Descripción: ' + chalk.cyan(tareasArray[i].descripcion) + ' Estado ' + chalk.green(tareasArray[i].estado));
+        // }
     break;
     case 'modificar' :
         const estadoArr = tareas.leer();
