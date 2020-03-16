@@ -21,6 +21,15 @@ array puede contener menos elementos que el original.
 let notasAprobadas = notas.filter(numero => numero >= 4);
 console.log('Array recorrido con .filter() | Devuelve las notas aprobadas según la condición ' + notasAprobadas);
 
+const arr = [10,15,17,22,44,7,9,102];
+const pares = arr.filter(i => {
+  const cond = i % 2 === 0;
+  console.log('El número ' + i + ' es par? ' + cond);
+  return i % 2 === 0; 
+});
+
+console.log(pares);
+
 /*
 .reduce()
 Este método recorre el array y devuelve un único valor.
