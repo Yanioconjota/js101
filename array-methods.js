@@ -37,6 +37,9 @@ console.log('Array recorrido con .reduce() | Devuelve la sumatoria de cada uno d
 La finalidad de este método es iterar sobre un array.
 Recibe un callback como parámetro y, a diferencia de los
 métodos anteriores, éste no retorna nada.
+
+La única desventaja que tiene el For Each es que lo recorre desde principio a fin, pero con el
+for común se puede poner condiciones para que termine antes.
 */
 
 notas.forEach((valor, indice) => console.log('El valor ' + valor + ' Está en el índice: ' + indice));
