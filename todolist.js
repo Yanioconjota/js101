@@ -1,6 +1,8 @@
-const tareas = require('./tasks');
-const chalk = require('chalk');
-const accion = process.argv[2];
+const tareas = require('./tasks'),
+      chalk = require('chalk'),
+      accion = process.argv[2],
+      nuevaTarea = process.argv[3],
+      nuevoEstado = process.argv[4];
 
 switch (accion) {
   case 'listar':
@@ -8,23 +10,15 @@ switch (accion) {
     tareasArray.forEach((tarea, i) => {
       console.log((i + 1) + ' - ' + 'Descripción: ' + chalk.cyan(tarea.descripcion) + ' Estado ' + chalk.green(tarea.estado));
     });
-    // for (let i = 0; i < tareasArray.length; i++) {
-    //     console.log((i+1) + ' - ' + 'Descripción: ' + chalk.cyan(tareasArray[i].descripcion) + ' Estado ' + chalk.green(tareasArray[i].estado));
-    // }
     break;
-  case 'modificar':
-    const estadoArr = tareas.leer();
-    if (process.argv[3] !== undefined) {
-      for (let i = 0; i < estadoArr.length; i++) {
-        let estado = chalk.green(estadoArr[process.argv[3]].estado);
-        let nuevoEstado = chalk.green(process.argv[4]);
-        console.log((i + 1) + ' - ' + 'Descripción: ' + chalk.cyan(estadoArr[i].descripcion) + ' Estado ' + estado.replace(estadoArr[process.argv[3]].estado, nuevoEstado));
-      }
+  case 'agregar':
+    const resultadoGuardar = tareas.guardar(nuevaTarea);
+    if (nuevaTarea) {
+      console.log('La tarea ' + nuevaTarea + ' fue agregada exitpsamente');
     } else {
-      console.log('No hay nada para modificar');
-
+      console.log('Debes agregar una tarea con estado!');
     }
-
+    
     break;
   case undefined:
     console.log('Chino no me come esto cosa');
