@@ -18,7 +18,9 @@ switch (accion) {
     } else {
       console.log('Debes agregar una tarea con estado!');
     }
-    
+    break;
+  case 'filtrar':
+    console.log('se ha filtrado');
     break;
   case undefined:
     console.log('Chino no me come esto cosa');

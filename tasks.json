@@ -7,4 +7,7 @@
 }, {
   "descripcion": "Estudiar JS",
   "estado": "Cumplida"
+}, {
+  "descripcion": "estudiar node",
+  "estado": "Pendiente"
 }]
