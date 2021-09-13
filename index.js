@@ -4,4 +4,4 @@ let title = 'breaking bad rules!'
 
 let nombreCompleto = (nombre, apellido) => `${nombre} ${apellido}`;
 let saludar = (nombre, apellido, callback) => `Hola ${callback(nombre, apellido)}`;
-console.log(saludar('Homero', 'Tompson', nombreCompleto));
+console.log(saludar('Homero', 'Thompson', nombreCompleto));
